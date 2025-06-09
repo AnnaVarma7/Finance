@@ -1,0 +1,64 @@
+🏠 Real Estate Price Prediction
+This project uses machine learning to predict real estate prices based on proximity to amenities and geographic location. It explores feature impacts, visual patterns, and model performance using linear regression.
+
+🎯 Objective
+Estimate house price per unit area using relevant real estate features
+Identify key factors influencing property valuation
+Build and evaluate a predictive regression model
+
+🧰 Tools & Libraries
+Python
+Pandas – Data handling
+Seaborn & Matplotlib – Data visualization
+Scikit-learn – Model training and evaluation
+
+📁 Dataset Overview
+File: Real_Estate.csv
+
+Features include:
+Transaction date
+House age
+Distance to the nearest MRT station
+Number of convenience stores
+Latitude, Longitude
+
+House price of unit area (Target)
+
+🧪 Steps Followed
+1. Data Preprocessing
+Checked for missing values (none found)
+Explored distributions using histograms
+Converted date formats and extracted temporal features if needed (not used in modeling)
+
+2. Exploratory Data Analysis (EDA)
+Scatter plots revealed:
+Negative correlation between house price and MRT distance
+Positive correlation with number of nearby convenience stores
+Correlation matrix confirmed:
+Strongest factor: Distance to MRT station (-0.64)
+Moderate factor: Number of convenience stores (0.28)
+
+3. Model Building
+Algorithm: Linear Regression
+Features used:
+Distance to MRT
+Number of convenience stores
+Latitude, Longitude
+Target: House price per unit area
+Train/Test Split: 80/20
+
+4. Model Evaluation
+Visualized predicted vs actual prices
+Reasonable accuracy for most points, though some outliers exist
+Performance can be further improved with advanced models (e.g., Random Forests)
+
+📊 Key Insights
+Properties closer to MRT stations have significantly higher prices
+Local amenities (stores) also positively influence price
+Age of the house has minimal impact on pricing in this dataset
+Geographic coordinates provide spatial context but limited predictive power alone
+
+💡 Future Enhancements
+Include more features like floor area, number of rooms, year built
+Use ensemble models (XGBoost, Random Forest) for better accuracy
+Apply geospatial clustering or heatmaps for location-based insights
