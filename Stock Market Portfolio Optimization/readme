@@ -3,92 +3,64 @@ This project demonstrates how to build an optimized stock portfolio using Modern
 
 💡 Key Concepts
 Modern Portfolio Theory (MPT)
-
 Efficient Frontier
-
 Sharpe Ratio
-
 Portfolio Diversification
-
 Correlation & Volatility
 
 🧪 Tools & Libraries
 Python
-
 Pandas, NumPy
-
 Matplotlib, Seaborn
-
 yfinance – for fetching stock data
 
 📊 Stocks Analyzed
 RELIANCE.NS – Reliance Industries
-
 TCS.NS – Tata Consultancy Services
-
 INFY.NS – Infosys
-
 HDFCBANK.NS – HDFC Bank
 
 🔍 What’s Included
 ✅ Data Collection
 Fetches 1-year historical data using yfinance
-
 Extracts Adjusted Close, Volume, and other metrics
 
 📈 Visualization
 Time-series line plots of Adjusted Close Prices
-
 Moving Averages (50-day & 200-day)
-
 Volume trends for each stock
-
 Distribution of daily returns
-
 Correlation heatmap of daily returns
 
 📉 Portfolio Optimization
 Simulates 10,000 random portfolios
-
 Calculates annualized return, volatility, and Sharpe ratio
-
 Plots the Efficient Frontier
-
 Identifies the portfolio with maximum Sharpe ratio
 
 📊 Final Output
 Expected return: ~31.13%
-
 Volatility: ~15.60%
-
 Sharpe ratio: ~1.99
 
 Optimal Portfolio Weights:
-
 HDFCBANK: 44.9%
-
 INFY: 39.6%
-
 RELIANCE: 8.7%
-
 TCS: 6.7%
 
 📂 Folder Structure
-nginx
-Copy
-Edit
+
 Stock Market Portfolio Optimization/
 │
 ├── stock_optimizer.ipynb    # Main notebook with code and visualizations
 ├── images/                  # (Optional) Visual plots saved
 └── README.md                # Project overview and explanation
+
 📌 How to Use
 Clone the repository
-
 Install dependencies with pip install -r requirements.txt
-
 Run the Jupyter Notebook
-
 Modify tickers to test other portfolios
 
 🎯 Summary
