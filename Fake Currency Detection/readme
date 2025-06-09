@@ -1,0 +1,60 @@
+💵 Fake Currency Detection Using Machine Learning
+Detecting counterfeit banknotes is a real-world challenge in finance and security. This project applies machine learning to identify fake currency using a dataset of wavelet-transformed image features of banknotes. The task is framed as a binary classification problem: identifying whether a banknote is authentic (0) or fake (1).
+
+🎯 Objective
+To build a supervised classification model that accurately predicts whether a banknote is real or fake based on extracted statistical features.
+
+🧰 Tools & Libraries
+Python
+Pandas & NumPy – Data handling
+Matplotlib & Seaborn – Visualization
+Scikit-learn – Data preprocessing, model building, evaluation
+
+🧠 Features Used
+The dataset contains 4 input features derived from wavelet-transformed images of banknotes:
+Variance
+Skewness
+Kurtosis
+Entropy
+
+The target variable (auth) indicates:
+0 → Real banknote
+1 → Fake banknote
+
+📊 Exploratory Data Analysis
+No missing values were found in the dataset.
+A pairplot revealed that variance and skewness are good discriminators between real and fake banknotes.
+The target variable was originally slightly imbalanced but was balanced using random undersampling.
+
+🧹 Data Processing
+The dataset was randomly undersampled to balance classes (610 each).
+Data was split into 70% training and 30% testing.
+Features were standardized using StandardScaler.
+
+🤖 Model: Logistic Regression
+A Logistic Regression model was trained with the following characteristics:
+Solver: 'lbfgs'
+Random state: 42
+
+🧪 Model Evaluation
+Accuracy: 98.36%
+Confusion Matrix:
+               Pred.Negative  Pred.Positive
+Act.Negative            187              6
+Act.Positive              0            173
+The model achieved 100% precision for predicting real banknotes.
+
+🔍 Single Prediction Example
+Input: [4.5, -8.1, 2.4, 1.4]
+Predicted Class: Real (0)
+Probability: [0.61 (Real), 0.39 (Fake)]
+
+✅ Key Takeaways
+Logistic Regression can be a powerful baseline model for counterfeit detection.
+Simple wavelet features can separate real and fake currency with high accuracy.
+Feature scaling and class balancing are essential for reliable performance.
+
+🔮 Future Work
+Experiment with ensemble methods (e.g., Random Forest, XGBoost).
+Add image-based deep learning using CNNs on raw note images.
+Deploy the model using a Flask or Streamlit web app.
